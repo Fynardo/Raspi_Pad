@@ -2,7 +2,6 @@
 #include <termios.h>
 #include <unistd.h>
 
-
 int serial_open();
 int serial_close(int fd);
 int serial_init(int fd, char * port, int baud);
