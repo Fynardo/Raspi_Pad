@@ -42,7 +42,6 @@ while(1){
 
   write(fd_uinput,&ev,sizeof(ev));
 
-
   memset(&ev,0,sizeof(ev));
   ev.type = EV_SYN;
   ev.code = SYN_REPORT;
@@ -52,7 +51,6 @@ while(1){
 
   tcflush(fd_serial, TCIOFLUSH);
 }
-
 
   serial_close(fd_serial);
   uinput_destroy(fd_uinput);
