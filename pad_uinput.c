@@ -4,6 +4,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 #include "pad_uinput.h"
 
@@ -24,9 +25,15 @@ int uinput_init(int fd){
   if ( ioctl(fd, UI_SET_EVBIT, EV_KEY) == -1) return -1;  
   if ( ioctl(fd, UI_SET_EVBIT, EV_SYN) == -1) return -1;
   if ( ioctl(fd, UI_SET_KEYBIT, BTN_A) == -1) return -1;
+  if ( ioctl(fd, UI_SET_KEYBIT, BTN_B) == -1) return -1;
   if ( ioctl(fd, UI_SET_KEYBIT, BTN_START) == -1) return -1;
   if ( ioctl(fd, UI_SET_KEYBIT, KEY_ENTER) == -1) return -1;
-
+  if ( ioctl(fd, UI_SET_KEYBIT, KEY_UP) == -1) return -1;
+  if ( ioctl(fd, UI_SET_KEYBIT, KEY_DOWN) == -1) return -1;
+  if ( ioctl(fd, UI_SET_KEYBIT, KEY_LEFT) == -1) return -1;
+  if ( ioctl(fd, UI_SET_KEYBIT, KEY_RIGHT) == -1) return -1;
+  if ( ioctl(fd, UI_SET_KEYBIT, KEY_Q) == -1) return -1;
+  if ( ioctl(fd, UI_SET_KEYBIT, KEY_W) == -1) return -1;
   memset(&uidev,0,sizeof(uidev));
 
   snprintf(uidev.name, UINPUT_MAX_NAME_SIZE, "snes");
