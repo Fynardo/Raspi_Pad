@@ -34,6 +34,8 @@ int uinput_init(int fd){
   if ( ioctl(fd, UI_SET_KEYBIT, KEY_RIGHT) == -1) return -1;
   if ( ioctl(fd, UI_SET_KEYBIT, KEY_Q) == -1) return -1;
   if ( ioctl(fd, UI_SET_KEYBIT, KEY_W) == -1) return -1;
+  if ( ioctl(fd, UI_SET_KEYBIT, KEY_E) == -1) return -1;
+  if ( ioctl(fd, UI_SET_KEYBIT, KEY_R) == -1) return -1;
   memset(&uidev,0,sizeof(uidev));
 
   snprintf(uidev.name, UINPUT_MAX_NAME_SIZE, "snes");

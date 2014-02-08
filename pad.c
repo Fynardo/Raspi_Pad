@@ -13,6 +13,8 @@ void handle_btn (char * args, int fd_uinput){
 
   if ( args[0] == '1' ) ev.code = KEY_Q;
   if ( args[0] == '2' ) ev.code = KEY_W;
+  if ( args[0] == '3' ) ev.code = KEY_E;
+  if ( args[0] == '4' ) ev.code = KEY_R;
 
   if ( args[1] == '1' ) ev.value = 1; else ev.value = 0;
 
