@@ -1,5 +1,5 @@
 /* 
-  Programa controlador del arduino: Lee el estado de los botones del "Joystick Shield" y lo escribe en el puerto serial.
+  Programa controlador del arduino: Lee el estado de los botones del "Joystick Shield" y lo escribe en el puerto serial
 */
 
 //Constantes que representan los pines de los botones
